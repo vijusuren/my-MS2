@@ -18,7 +18,7 @@
 
 <!--Internal CSS link-->
 <link rel="stylesheet" href="assets/css/style.css">
-<title>Wordsearch Game!</title>
+<title>Word Search</title>
 </head>
 <body>
 <!--Navigation-->
@@ -347,3 +347,17 @@
         <li class="listWord found" text="WARSAW">WARSAW</li>
     </div>
 </div>
+<button id="solveButton" type="button">Answer!!!</button>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script src="js/wordpaths.js"></script>
+<script src="js/wordsearchcontroller.js"></script>
+<script src="js/wordsearchlogic.js"></script>
+<script src="js/wordsearchview.js"></script>
+<script>
+    	
+			$(document).ready( function() {
+				new WordSearchController("#wordboard", "#wordlist", "#solveButton", "#newGameButton", "#instructions", 
+					"#wordTheme");
+			})
+		
+</script>
