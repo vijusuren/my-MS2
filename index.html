@@ -1,0 +1,349 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<!--Required meta tags-->   
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+<meta name="Wordsearch" content="Memory game of Wordsearch">
+
+<!--CSS, Botstrap-->
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+
+<!--Font Awesome-->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.0/css/all.min.css">
+
+<!--Hover.css-->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/hover.css/2.3.1/css/hover-min.css" />
+
+<!--Internal CSS link-->
+<link rel="stylesheet" href="assets/css/style.css">
+<title>Wordsearch Game!</title>
+</head>
+<body>
+<!--Navigation-->
+<header>
+    <!--Navigation is copied from https://getbootstrap.com/docs/4.5/components/navbar/ -->
+    <nav class="navbar navbar-expand-md navbar-dark fixed-top">
+        <a class="navbar navbar-brand" href="index.html">Wordsearch Game!</a>
+        <button class="navbar-toggler" aria-expanded="false" aria-controls="navbarNavDropDown"
+            aria-label="Toggle navigation" type="button" data-target="#navbarNavDropDown" data-toggle="collapse">
+            <span class="custom-navbar-toggler-icon">
+                <i class="fas fa-bars"></i>
+            </span>
+        </button>
+        <div class="collapse navbar-collapse justify-content-end" id="navbarNavDropDown">
+            <ul class="navbar-nav">
+                <li class="nav-item  mr-4">
+                    <a class="nav-link active" href="index.html">Home</a>
+                </li>
+                <li class="nav-item mr-4">
+                    <a class="nav-link" href="result.html"></a>
+                </li>
+                <li class="nav-item mr-4">
+                    <a class="nav-link" href="contact.html">Contact</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+</header>
+<!--Navigation ends-->
+<!--Memory Game section-->
+<h1>Word Search Game!</h1>
+<h2>Capital Citites of Europe</h2>
+<button id="newGameButton" type="button"> New Game</button>
+<div id="Wordboard">
+    <div class="boardRow">
+        <button class="cell" row="0" column="0">T</button>
+        <button class="cell" row="0" column="1">N</button>
+        <button class="cell" row="0" column="2">R</button>
+        <button class="cell" row="0" column="3">S</button>
+        <button class="cell found" row="0" column="4">Z</button>
+        <button class="cell foound" row="0" column="5">U</button>
+        <button class="cell found" row="0" column="6">D</button>
+        <button class="cell found" row="0" column="7">A</button>
+        <button class="cell found" row="0" column="8">V</button>
+        <button class="cell" row="0" column="9">A</button>
+        <button class="cell" row="0" column="10">S</button>
+        <button class="cell" row="0" column="11">Q</button>
+        <button class="cell" row="0" column="12">H</button>
+        <button class="cell" row="0" column="13">X</button>
+        <button class="cell" row="0" column="14">B</button>
+    </div>
+    <div class="boardRow">
+        <button class="cell found" row="1" column="0">N</button>
+        <button class="cell found" row="1" column="1">N</button>
+        <button class="cell found" row="1" column="2">I</button>
+        <button class="cell found" row="1" column="3">L</button>
+        <button class="cell found" row="1" column="4">L</button>
+        <button class="cell found" row="1" column="5">A</button>
+        <button class="cell found" row="1" column="6">T</button>
+        <button class="cell" row="1" column="7">C</button>
+        <button class="cell found" row="1" column="8">G</button>
+        <button class="cell found" row="1" column="9">K</button>
+        <button class="cell" row="1" column="10">M</button>
+        <button class="cell found" row="1" column="11">E</button>
+        <button class="cell" row="1" column="12">K</button>
+        <button class="cell" row="1" column="13">T</button>
+        <button class="cell" row="1" column="14">Q</button>
+    </div>
+    <div class="boardRow">
+        <button class="cell" row="2" column="0">E</button>
+        <button class="cell" row="2" column="1">O</button>
+        <button class="cell found" row="2" column="2">I</button>
+        <button class="cell found" row="2" column="3">L</button>
+        <button class="cell" row="2" column="4">J</button>
+        <button class="cell" row="2" column="5">V</button>
+        <button class="cell" row="2" column="6">H</button>
+        <button class="cell found" row="2" column="7">I</button>
+        <button class="cell found" row="2" column="8">O</button>
+        <button class="cell found" row="2" column="9">W</button>
+        <button class="cell found" row="2" column="10">M</button>
+        <button class="cell" row="2" column="11">G</button>
+        <button class="cell" row="2" column="12">M</button>
+        <button class="cell" row="2" column="13">W</button>
+        <button class="cell" row="2" column="14">O</button>
+    </div>
+    <div class="boardRow">
+        <button class="cell" row="3" column="0">F</button>
+        <button class="cell found" row="3" column="1">L</button>
+        <button class="cell" row="3" column="2">L</button>
+        <button class="cell found" row="3" column="3">L</button>
+        <button class="cell found" row="3" column="4">B</button>
+        <button class="cell" row="3" column="5">V</button>
+        <button class="cell found" row="3" column="6">R</button>
+        <button class="cell found" row="3" column="7">P</button>
+        <button class="cell found" row="3" column="8">A</button>
+        <button class="cell found" row="3" column="9">O</button>
+        <button class="cell found" row="3" column="10">A</button>
+        <button class="cell" row="3" column="11">W</button>
+        <button class="cell" row="3" column="12">N</button>
+        <button class="cell" row="3" column="13">G</button>
+        <button class="cell" row="3" column="14">I</button>
+    </div>
+    <div class="boardRow">
+        <button class="cell" row="4" column="0">E</button>
+        <button class="cell" row="4" column="1">V</button>
+        <button class="cell found" row="4" column="2">O</button>
+        <button class="cell found" row="4" column="3">E</button>
+        <button class="cell found" row="4" column="4">R</button>
+        <button class="cell found" row="4" column="5">U</button>
+        <button class="cell found" row="4" column="6">J</button>
+        <button class="cell" row="4" column="7">M</button>
+        <button class="cell found" row="4" column="8">R</button>
+        <button class="cell found" row="4" column="9">N</button>
+        <button class="cell found" row="4" column="10">M</button>
+        <button class="cell found" row="4" column="11">S</button>
+        <button class="cell" row="4" column="12">T</button>
+        <button class="cell" row="4" column="13">R</button>
+        <button class="cell" row="4" column="14">I</button>
+    </div>
+    <div class="boardRow">
+        <button class="cell found" row="5" column="0">O</button>
+        <button class="cell" row="5" column="1">A</button>
+        <button class="cell found" row="5" column="2">R</button>
+        <button class="cell found" row="5" column="3">N</button>
+        <button class="cell" row="5" column="4">U</button>
+        <button class="cell found" row="5" column="5">E</button>
+        <button class="cell found" row="5" column="6">D</button>
+        <button class="cell" row="5" column="7">B</button>
+        <button class="cell" row="5" column="8">D</button>
+        <button class="cell" row="5" column="9">W</button>
+        <button class="cell found" row="5" column="10">A</button>
+        <button class="cell" row="5" column="11">O</button>
+        <button class="cell found" row="5" column="12">R</button>
+        <button class="cell" row="5" column="13">Z</button>
+        <button class="cell" row="5" column="14">W</button>
+    </div>
+    <div class="boardRow">
+        <button class="cell found" row="6" column="0">V</button>
+        <button class="cell found" row="6" column="1">N</button>
+        <button class="cell" row="6" column="2">A</button>
+        <button class="cell" row="6" column="3">I</button>
+        <button class="cell found" row="6" column="4">D</button>
+        <button class="cell" row="6" column="5">L</button>
+        <button class="cell found" row="6" column="6">B</button>
+        <button class="cell" row="6" column="7">G</button>
+        <button class="cell" row="6" column="8">X</button>
+        <button class="cell found" row="6" column="9">P</button>
+        <button class="cell found" row="6" column="10">D</button>
+        <button class="cell found" row="6" column="11">R</button>
+        <button class="cell" row="6" column="12">L</button>
+        <button class="cell found" row="6" column="13">A</button>
+        <button class="cell" row="6" column="14">W</button>
+    </div>
+    <div class="boardRow">
+        <button class="cell found" row="7" column="0">E</button>
+        <button class="cell found" row="7" column="1">W</button>
+        <button class="cell found" row="7" column="2">O</button>
+        <button class="cell found" row="7" column="3">C</button>
+        <button class="cell found" row="7" column="4">S</button>
+        <button class="cell found" row="7" column="5">O</button>
+        <button class="cell found" row="7" column="6">M</button>
+        <button class="cell" row="7" column="7">T</button>
+        <button class="cell found" row="7" column="8">O</button>
+        <button class="cell found" row="7" column="9">N</button>
+        <button class="cell found" row="7" column="10">R</button>
+        <button class="cell" row="7" column="11">G</button>
+        <button class="cell found" row="7" column="12">I</button>
+        <button class="cell" row="7" column="13">U</button>
+        <button class="cell found" row="7" column="14">W</button>
+    </div>
+    <div class="boardRow">
+        <button class="cell found" row="8" column="0">J</button>
+        <button class="cell" row="8" column="1">P</button>
+        <button class="cell" row="8" column="2">L</button>
+        <button class="cell found" row="8" column="3">O</button>
+        <button class="cell" row="8" column="4">E</button>
+        <button class="cell" row="8" column="5">K</button>
+        <button class="cell found" row="8" column="6">N</button>
+        <button class="cell found" row="8" column="7">D</button>
+        <button class="cell" row="8" column="8">O</button>
+        <button class="cell found" row="8" column="9">O</button>
+        <button class="cell found" row="8" column="10">E</button>
+        <button class="cell found" row="8" column="11">P</button>
+        <button class="cell found" row="8" column="12">V</button>
+        <button class="cell found" row="8" column="13">T</button>
+        <button class="cell" row="8" column="14">V</button>
+    </div>
+    <div class="boardRow">
+        <button class="cell found" row="9" column="0">A</button>
+        <button class="cell" row="9" column="1">D</button>
+        <button class="cell found" row="9" column="2">F</button>
+        <button class="cell" row="9" column="3">E</button>
+        <button class="cell" row="9" column="4">B</button>
+        <button class="cell" row="9" column="5">H</button>
+        <button class="cell found" row="9" column="6">G</button>
+        <button class="cell" row="9" column="7">K</button>
+        <button class="cell" row="9" column="8">U</button>
+        <button class="cell found" row="9" column="9">B</button>
+        <button class="cell found" row="9" column="10">T</button>
+        <button class="cell found" row="9" column="11">A</button>
+        <button class="cell found" row="9" column="12">I</button>
+        <button class="cell" row="9" column="13">K</button>
+        <button class="cell" row="9" column="14">H</button>
+    </div>
+    <div class="boardRow">
+        <button class="cell found" row="10" column="0">R</button>
+        <button class="cell found" row="10" column="1">I</button>
+        <button class="cell found" row="10" column="2">N</button>
+        <button class="cell found" row="10" column="3">I</button>
+        <button class="cell found" row="10" column="4">C</button>
+        <button class="cell found" row="10" column="5">O</button>
+        <button class="cell found" row="10" column="6">S</button>
+        <button class="cell found" row="10" column="7">I</button>
+        <button class="cell found" row="10" column="8">A</button>
+        <button class="cell found" row="10" column="9">S</button>
+        <button class="cell found" row="10" column="10">S</button>
+        <button class="cell found" row="10" column="11">R</button>
+        <button class="cell found" row="10" column="12">E</button>
+        <button class="cell" row="10" column="13">A</button>
+        <button class="cell" row="10" column="14">P</button>
+    </div>
+    <div class="boardRow">
+        <button class="cell found" row="11" column="0">A</button>
+        <button class="cell" row="11" column="1">Z</button>
+        <button class="cell" row="11" column="2">J</button>
+        <button class="cell" row="11" column="3">W</button>
+        <button class="cell found" row="11" column="4">R</button>
+        <button class="cell found" row="11" column="5">L</button>
+        <button class="cell" row="11" column="6">L</button>
+        <button class="cell found" row="11" column="7">K</button>
+        <button class="cell" row="11" column="8">K</button>
+        <button class="cell found" row="11" column="9">I</button>
+        <button class="cell found" row="11" column="10">M</button>
+        <button class="cell found" row="11" column="11">I</button>
+        <button class="cell found" row="11" column="12">N</button>
+        <button class="cell found" row="11" column="13">S</button>
+        <button class="cell found" row="11" column="14">K</button>
+    </div>
+    <div class="boardRow">
+        <button class="cell found" row="12" column="0">S</button>
+        <button class="cell" row="12" column="1">A</button>
+        <button class="cell" row="12" column="2">F</button>
+        <button class="cell found" row="12" column="3">I</button>
+        <button class="cell" row="12" column="4">I</button>
+        <button class="cell found" row="12" column="5">S</button>
+        <button class="cell" row="12" column="6">V</button>
+        <button class="cell" row="12" column="7">T</button>
+        <button class="cell found" row="12" column="8">I</button>
+        <button class="cell found" row="12" column="9">L</button>
+        <button class="cell found" row="12" column="10">A</button>
+        <button class="cell found" row="12" column="11">S</button>
+        <button class="cell found" row="12" column="12">N</button>
+        <button class="cell" row="12" column="13">N</button>
+        <button class="cell" row="12" column="14">V</button>
+    </div>
+    <div class="boardRow">
+        <button class="cell" row="13" column="0">K</button>
+        <button class="cell" row="13" column="1">J</button>
+        <button class="cell found" row="13" column="2">C</button>
+        <button class="cell" row="13" column="3">M</button>
+        <button class="cell" row="13" column="4">L</button>
+        <button class="cell found" row="13" column="5">O</button>
+        <button class="cell" row="13" column="6">F</button>
+        <button class="cell found" row="13" column="7">S</button>
+        <button class="cell found" row="13" column="8">N</button>
+        <button class="cell found" row="13" column="9">E</button>
+        <button class="cell found" row="13" column="10">H</button>
+        <button class="cell found" row="13" column="11">T</button>
+        <button class="cell found" row="13" column="12">A</button>
+        <button class="cell" row="13" column="13">J</button>
+        <button class="cell" row="13" column="14">K</button>
+    </div>
+    <div class="boardRow">
+        <button class="cell" row="14" column="0">Z</button>
+        <button class="cell found" row="14" column="1">A</button>
+        <button class="cell" row="14" column="2">L</button>
+        <button class="cell" row="14" column="3">D</button>
+        <button class="cell" row="14" column="4">A</button>
+        <button class="cell" row="14" column="5">J</button>
+        <button class="cell" row="14" column="6">F</button>
+        <button class="cell" row="14" column="7">J</button>
+        <button class="cell" row="14" column="8">A</button>
+        <button class="cell" row="14" column="9">Z</button>
+        <button class="cell found" row="14" column="10">V</button>
+        <button class="cell" row="14" column="11">J</button>
+        <button class="cell" row="14" column="12">V</button>
+        <button class="cell" row="14" column="13">L</button>
+        <button class="cell" row="14" column="14">G</button>
+    </div>
+</div>
+<div id="wordlist">
+    <div class="listRow">
+        <li class="listWord found" text="AMSTERDAM">AMSTERDAM</li>
+        <li class="listWord found" text="ATHENS">ATHENS</li>
+        <li class="listWord found" text="BERLIN">BERLIN</li>
+        <li class="listWord found" text="BERNE">BERNE</li>
+    </div>
+    <div class="listRow">
+        <li class="listWord found" text="DUBLIN">DUBLIN</li>
+        <li class="listWord found" text="KIEV">KIEV</li>
+        <li class="listWord found" text="LISBON">LISBON</li>
+        <li class="listWord found" text="LONDON">LONDON</li>
+    </div>
+    <div class="listRow">
+        <li class="listWord found" text="MINSK">MINSK</li>
+        <li class="listWord found" text="MOSCOW">MOSCOW</li>
+        <li class="listWord found" text="NICOSIA">NICOSIA</li>
+        <li class="listWord found" text="OSLO">OSLO</li>
+    </div>
+    <div class="listRow">
+        <li class="listWord found" text="PARIS">PARIS</li>
+        <li class="listWord found" text="PODGORICA">PODGORICA</li>
+        <li class="listWord found" text="RIGA">RIGA</li>
+        <li class="listWord found" text="ROME">ROME</li>
+    </div>
+    <div class="listRow">
+        <li class="listWord found" text="SARAJEVO">SARAJEVO</li>
+        <li class="listWord found" text="SKOPJE">SKOPJE</li>
+        <li class="listWord found" text="SOFIA">SOFIA</li>
+        <li class="listWord found" text="TALLINN">TALLINN</li>
+    </div>
+    <div class="listRow">
+        <li class="listWord found" text="TIRANA">TIRANA</li>
+        <li class="listWord found" text="VADUZ">VADUZ</li>
+        <li class="listWord found" text="VIENNA">VIENNA</li>
+        <li class="listWord found" text="WARSAW">WARSAW</li>
+    </div>
+</div>
