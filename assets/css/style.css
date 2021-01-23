@@ -67,7 +67,7 @@ body{
 }
 .cell.found {
 
-	background-color: rgb(158, 123, 158);
+	background-color: yellow;
 	border: 1px black solid;
 	font-weight: bold;
 
@@ -94,7 +94,7 @@ body{
 }
 .listWord.found {
 
-	color: #fff;
+	color: black;
 	text-decoration: line-through;
 	
 }
