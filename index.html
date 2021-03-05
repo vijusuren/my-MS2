@@ -1,31 +1,28 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-<!--Required meta tags-->   
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta http-equiv="X-UA-Compatible" content="ie=edge">
-<meta name="Wordsearch" content="Memory game of Wordsearch">
-
-<!--CSS, Botstrap-->
-<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
-
-<!--Font Awesome-->
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.0/css/all.min.css">
-
+ <head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <meta http-equiv="X-UA-Compatible" content="ie=edge">
+   <title>Animal Flip Game</title>
+   <!--Google Fonts-->
+   <link rel="preconnect" href="https://fonts.gstatic.com">
+   <link href="https://fonts.googleapis.com/css2?family=Gilda+Display&display=swap" rel="stylesheet">
+ <!--CSS, Botstrap-->
+   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+   <!--Font Awesome-->
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.0/css/all.min.css">
 <!--Hover.css-->
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/hover.css/2.3.1/css/hover-min.css" />
-
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/hover.css/2.3.1/css/hover-min.css" />
 <!--Internal CSS link-->
-<link rel="stylesheet" href="assets/css/style.css">
-<title>Word Search</title>
-</head>
-<body>
+   <link rel="stylesheet" href="assets/css/style.css">
+ </head>
+ <body>
 <!--Navigation-->
-<header>
+  <header>
     <!--Navigation is copied from https://getbootstrap.com/docs/4.5/components/navbar/ -->
     <nav class="navbar navbar-expand-md navbar-dark fixed-top">
-        <a class="navbar navbar-brand" href="index.html"></a>
+        <a class="navbar navbar-brand" href="index.html">Animal Flip</a>
         <button class="navbar-toggler" aria-expanded="false" aria-controls="navbarNavDropDown"
             aria-label="Toggle navigation" type="button" data-target="#navbarNavDropDown" data-toggle="collapse">
             <span class="custom-navbar-toggler-icon">
@@ -38,7 +35,7 @@
                     <a class="nav-link active" href="index.html">Home</a>
                 </li>
                 <li class="nav-item mr-4">
-                    <a class="nav-link" href="result.html"></a>
+                    <a class="nav-link" href="animalinfo.html">Animal Info</a>
                 </li>
                 <li class="nav-item mr-4">
                     <a class="nav-link" href="contact.html">Contact</a>
@@ -46,42 +43,172 @@
             </ul>
         </div>
     </nav>
-</header>
+  </header>
 <!--Navigation ends-->
-<!--Memory Game section-->
-<h1>Word Search Game!</h1>
-<h2 id="themeIntro"><span id="WordTheme"></span>Capital Citites of Europe</h2>
-<button id="newGameButton" type="button"> New Game</button>
-<div class="game-timer">Time: <span class="timer"> 00:00</span></div>
-<div id="Wordboard"></div>
-<div id="wordlist"></div>
-    
-<!--Pop up modal to congratulate-->
-<div id="popup1" class="overlay">
-    <div class="popup">
-        <h2>Congratulation</h2>
-        <a class="close" href="#">x</a>
-        <div class="content-1">
-            Congratulation! you have completed the game.
+<!-- Flex Div to hold game-->
+<div class="container-fluid game-container">
+             <!-- Star Rating, Moves and Match's container-->
+            <div class="row">
+              <div class="col-lg-6 float-left text-center">
+                <div class="ins">
+                    <h3>How to Play?</h3>
+                    <p>Match the card for each Animals. Make less moves to score more.All the Best!!!</p>
+                </div>
+                <div class="moves">
+                  <div class="stars">
+                    <ul>
+                        <li><i class="fa fa-star"></i></li>
+                        <li><i class="fa fa-star"></i></li>
+                        <li><i class="fa fa-star"></i></li>
+                    </ul>
+                  </div>
+                    <span class="moves-counter">0</span>Move(s)
+                    <span class="count-counter">0</span>Match(s) <br>
+                    <div class="game-timer">Time: <span class="timer"> 00:00</span></div>
+                    <div>
+                    <span><button class="restart-btn" onclick="restart()">Restart Game</button></span>
+                    <audio  id="music">
+                      <source src="assets/sound/bgmusic.mp3" type="audio/mpeg">
+
+                    </audio>
+                    <span><button class="play-btn" onclick="play()">Music On</button></span>
+                    <button class="play-btn" onclick="pause()">Music Off</button>
+
+                </div>
+              </div>
+            </div>
+        <!--Game Board-->
+  <div class="col-lg-6 float-right">
+      <div class="memory-game">
+          <div class="memory-card" data-framework="Chitha">
+            <img class="front-face" src="assets/image/chitha1.jpg" alt="Chitha">
+            <img class="back-face" src="https://images.all-free-download.com/images/graphicthumb/zoo_cute_vector_148146.jpg" alt="Memory-card">
+          </div>
+          <div class="memory-card" data-framework="Chitha">
+            <img class="front-face" src="assets/image/chitha1.jpg" alt="Chitha">
+            <img class="back-face" src="https://images.all-free-download.com/images/graphicthumb/zoo_cute_vector_148146.jpg" alt="Memory-card">
+          </div>
+
+          <div class="memory-card" data-framework="giraffe">
+            <img class="front-face" src="assets/image/giraffe1.jpg" alt="giraffe">
+            <img class="back-face" src="https://images.all-free-download.com/images/graphicthumb/zoo_cute_vector_148146.jpg" alt="Memory-card">
+          </div>
+          <div class="memory-card" data-framework="giraffe">
+            <img class="front-face" src="assets/image/giraffe1.jpg" alt="giraffe">
+            <img class="back-face" src="https://images.all-free-download.com/images/graphicthumb/zoo_cute_vector_148146.jpg" alt="Memory-card">
+          </div>
+
+          <div class="memory-card" data-framework="deer">
+            <img class="front-face" src="assets/image/deer1.jpg" alt="deer">
+            <img class="back-face" src="https://images.all-free-download.com/images/graphicthumb/zoo_cute_vector_148146.jpg" alt="Memory-card">
+          </div>
+          <div class="memory-card" data-framework="deer">
+            <img class="front-face" src="assets/image/deer1.jpg" alt="deer">
+            <img class="back-face" src="https://images.all-free-download.com/images/graphicthumb/zoo_cute_vector_148146.jpg" alt="Memory-card">
+          </div>
+
+          <div class="memory-card" data-framework="lion">
+            <img class="front-face" src="assets/image/lion1.jpg" alt="lion">
+            <img class="back-face" src="https://images.all-free-download.com/images/graphicthumb/zoo_cute_vector_148146.jpg" alt="Memory-card">
+          </div>
+          <div class="memory-card" data-framework="lion">
+            <img class="front-face" src="assets/image/lion1.jpg" alt="lion">
+            <img class="back-face" src="https://images.all-free-download.com/images/graphicthumb/zoo_cute_vector_148146.jpg" alt="Memory-card">
+          </div>
+
+          <div class="memory-card" data-framework="hippopotamus">
+            <img class="front-face" src="assets/image/hippopotamus1.jpg" alt="hippopotamus">
+            <img class="back-face" src="https://images.all-free-download.com/images/graphicthumb/zoo_cute_vector_148146.jpg" alt="Memory-card">
+          </div>
+          <div class="memory-card" data-framework="hippopotamus">
+            <img class="front-face" src="assets/image/hippopotamus1.jpg" alt="hippopotamus">
+            <img class="back-face" src="https://images.all-free-download.com/images/graphicthumb/zoo_cute_vector_148146.jpg" alt="Memory-card">
+          </div>
+
+          <div class="memory-card" data-framework="tiger">
+            <img class="front-face" src="assets/image/tiger1.jpg" alt="tiger">
+            <img class="back-face" src="https://images.all-free-download.com/images/graphicthumb/zoo_cute_vector_148146.jpg" alt="Memory-card">
+          </div>
+          <div class="memory-card" data-framework="tiger">
+            <img class="front-face" src="assets/image/tiger1.jpg" alt="tiger">
+            <img class="back-face" src="https://images.all-free-download.com/images/graphicthumb/zoo_cute_vector_148146.jpg" alt="Memory-card">
+          </div>
+          <div class="memory-card" data-framework="rabbit">
+            <img class="front-face" src="assets/image/rabbit1.jpg" alt="rabbit">
+            <img class="back-face" src="https://images.all-free-download.com/images/graphicthumb/zoo_cute_vector_148146.jpg" alt="Memory-card">
+          </div>
+          <div class="memory-card" data-framework="rabbit">
+            <img class="front-face" src="assets/image/rabbit1.jpg" alt="rabbit">
+            <img class="back-face" src="https://images.all-free-download.com/images/graphicthumb/zoo_cute_vector_148146.jpg" alt="Memory-card">
+          </div>
+          <div class="memory-card" data-framework="zebra">
+            <img class="front-face" src="assets/image/zebra1.jpg" alt="zebra">
+            <img class="back-face" src="https://images.all-free-download.com/images/graphicthumb/zoo_cute_vector_148146.jpg" alt="Memory-card">
+          </div>
+          <div class="memory-card" data-framework="zebra">
+            <img class="front-face" src="assets/image/zebra1.jpg" alt="zebra">
+            <img class="back-face" src="https://images.all-free-download.com/images/graphicthumb/zoo_cute_vector_148146.jpg" alt="Memory-card">
+          </div>
         </div>
-        <div class="content-2">
-            <p>Time Taken:
-            <span id="timerDisplay"></span>
-            </p>
-        </div>
-    </div>
 </div>
-<button id="solveButton" type="button">Answer!!!</button>
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-<script src="js/wordpaths.js"></script>
-<script src="js/wordsearchcontroller.js"></script>
-<script src="js/wordsearchlogic.js"></script>
-<script src="js/wordsearchview.js"></script>
-<script>
-    	
-			$(document).ready( function() {
-				new WordSearchController("#wordboard", "#wordlist", "#solveButton", "#newGameButton", "#instructions", 
-					"#wordTheme");
-			})
-		
-</script>
+</div>
+</div>
+
+<!-- Popup Modal to show results from game-->
+       <div id="popup1" class="overlay">
+           <div class="popup">
+              <div class="animated_rainbow_1"><h2>Congratulations</h2></div>
+               <a class="close" href="#">X</a>
+               <div class="content-1">
+                   Congratulations you have completed the game.
+               </div>
+               <div class="content-2">
+                   <p>You made
+                       <span id="finalMove"></span>
+                       moves
+                   </p>
+                   <p>Rating:
+                       <span id="starRating"></span></p>
+                  <p>Time Taken:
+                      <span id="timerDisplay"></span></p>
+               </div>
+
+           </div>
+       </div>
+       <!-- Popup Modal to show results from game-->
+  <!--Footer-->
+  <footer class="container-fluid fixed-bottom">
+    <div id="footer-details" class="row">
+      <div class="col">
+        <ul class="list-inline social-links">
+          <li class="list-inline-items">
+            <a href="https://www.facebook.com/" target="_blank"><i class="fab fa-facebook"></i></a>
+          </li>
+          <li class="list-inline-items">
+            <a href="https://twitter.com/" target="_blank"><i class="fab fa-twitter" aria-hidden="true"></i></a>
+          </li>
+          <li class="list-inline-items">
+            <a href="https://github.com/" target="_blank"><i class="fab fa-github"></i></a>
+          </li>
+        </ul>
+        </div>
+        </div>
+    </footer>
+    <!-- Jquery/Boostrap Links -->
+        <script
+            src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+            integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+            crossorigin="anonymous"></script>
+        <script
+            src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"
+            integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN"
+            crossorigin="anonymous"></script>
+        <script
+            src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"
+            integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV"
+            crossorigin="anonymous"></script>
+
+        <!-- Javascript for this page Link -->
+  <script src="assets/js/script.js"></script>
+ </body>
+ </html>

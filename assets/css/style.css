@@ -1,173 +1,400 @@
-*{
-    text-align: center;
-    font-weight: normal;
+*,
+*::before,
+*::after {
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
 }
-#solveButton, #newGameButton, .listWord {
-
-	padding: 5px;
-
+html, body {
+  font-family: 'Gilda Display', serif;
+  color: white;
+  height: 100%;
+    width: 100%;
+    margin: 0;
+    overflow-x: hidden;
+    overflow-y:auto;/*#fce38a*/
+    background-color: #295939;
+    background-repeat: no-repeat;
+    }
+header {
+    margin: auto;
+    background: #ffff92;
+    -webkit-box-shadow: 0 2px 8px 0 rgba(0, 0, 0, 0.2);
+    box-shadow: 0 2px 8px 0 rgba(0, 0, 0, 0.2);
 }
-#solveButton, #newGameButton {
-    border: 2px black solid;
-    border-radius: 8px;
-}
-.cell, #wordlist{
-    background-color: #fff;
-}
+/*-------------------------Header*/
 h1,h2{
-    margin:10px auto 10px auto;
-    display: table;
-}
-body{
-    background-color: green;
-}
-#wordboard{
-    margin:20px auto 0 auto;
-    border: 2px black solid;
-    display: table;
-    min-width: 600px;
-}
-.boardRow{
-    display:table-row;
-}
-.cell {
-
-	margin: 0 auto;
-	border: none;
-	display: table-cell;
-	height:30px;
-	width: 30px;
-	font-size: 17px;
-	padding: 0;
-	outline: 0;
-
-	/*ensures text can't be accidentally selected*/
-	cursor: default; 
-	-moz-user-select: none;
-    -ms-user-select: none; 
-    -khtml-user-select: none; 
-    -webkit-user-select: none; 
-    -webkit-touch-callout: none; 
+  text-align: center;
+  font-size: 200%;
 
 }
-.cell:hover {
-
-	background-color: yellow;
-
+/*-------------------------NavBar*/
+.navbar-nav li{
+  text-align: right;
+  color:white;
 }
-.cell.selectable {
-
-	background-color: orange;
-
+.navbar{
+  background-color: #96bb7c;
+  margin-bottom : 0;
+  border: 0;
+  display: -webkit-box;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  padding: 0 1rem;
 }
-.cell.selected { 
-
-	background-color: pink;
-
+.navbar-brand{
+    padding-left: 15px;
+    display: inline-block;
+    font-size: 200%;
+    font-weight: 600;
+    height: 50px;;
+    width: 150px;
+    text-align: left;
+    font-style: italic;
 }
-.cell.found {
-
-	background-color: yellow;
-	border: 1px black solid;
-	font-weight: bold;
-
+.navbar-nav{
+    font-size: 1.5rem;
+    font-weight: 400;
+    text-align: left;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    margin-bottom: 0;
+    margin-right: 0;
 }
-#wordlist { 
 
-	margin: 40px auto 0 auto;
-	border: 2px black solid;
-	display: table;
-	min-width: 600px;
-	font-size: 17px;
-	text-align: center;
-	
+/*-------------------------Footer*/
+footer {
+  color: #0e49b5;
+  margin: 0;
+  background-color:#96bb7c;
+  height: 2.5rem;
+  padding: 0;
+  bottom: 0;
+  width: 100%;
 }
-.listRow {
-
-	display: table-row;
-
+.social-links{
+    padding-bottom: 1.25rem;
+    float: none;
 }
-.listWord {
 
-	display: table-cell;
-	
+.social-links li a i {
+    height: 2rem;
+    width: 2rem;
+    padding: 0.75rem 0;
+    border-radius: 50%;
+    font-size: 1.25rem;
+    line-height: 0.625rem;
+    text-align: center;
+    color: #fff;
+    background-color: #000;
 }
-.listWord.found {
 
-	color: black;
-	text-decoration: line-through;
-	
+.list-inline-items {
+    padding: 0.625rem;
+    display: inline-block;
 }
-#solveButton, #newGameButton {
+#footer-details{
+    text-align: center;
+  }
+.ins-moves {
+    width: 35%;
+    height: 620px;
+    margin-top: 70px;
 
-	background-color: red;
-	margin: 20px auto 20px auto;
-	display: block;
-	outline: 0;
-	border-radius: 8px;
-	font-size: 18px;
-	font-weight: bold;
+    }
 
+  .ins-moves p {
+    margin: 8px;
+  }
+
+  .ins {
+    margin-top: 5rem;
+   margin-bottom: 1.25rem;
+   padding:0 .65rem;
+  }
+
+  .moves {
+    margin-top: 5px;
+    text-align: center;
+    color: #fff;
+    font-size: 20px;
+
+  }
+
+  .moves-counter {
+    margin-left: 20px;
+  }
+  .restart-btn {
+  font-size: 20px;
+  background-color: #96bb7c;
+  color: #000000;
+  margin: 10px;
 }
-.overlay{
+.play-btn {
+  background-color: #96bb7c;
+}
+
+/*Overlay for Sign Up Page*/
+  .overlay {
     position: fixed;
     top: 0;
     bottom: 0;
     left: 0;
     right: 0;
-    background:transparent;
-    -webkit-transition: opacity 500ms;
-    -o-transition: opacity 500ms;
+    background: rgb(6 51 36 / 0.5);
     transition: opacity 500ms;
     visibility: hidden;
     opacity: 0;
-}
+  }
 
-.overlay:target{
+  .overlay:target {
     visibility: visible;
     opacity: 1;
-}
-/*------------------Modal popup */
-.popup{
-    margin: 12.5rem auto;
-    padding: 1.875rem;
-    background:rgba(47, 68, 96, 1);
-    border-radius: 0.313rem;
+  }
+/*Modal Popup when completing sign up form*/
+  .popup {
+    margin: 200px auto;
+    padding: 30px;
+    background:#96bb7c;
+    border-radius: 5px;
     width: 70%;
     position: relative;
-    -webkit-transition: all 5s ease-in-out;
-    -o-transition: all 5s ease-in-out;
     transition: all 5s ease-in-out;
-    color: #fff;
-}
+    color: black;
+    font-size: 20px;
+  }
 
-.popup h2{
+  .popup h2 {
     margin-top: 0;
-    color: #fff;
+    /*color: white;*/
     text-align: center;
+
+  }
+  .animated_rainbow_1 {
+	background-image: -webkit-linear-gradient(left, #f00, #ff2b00, #f50, #ff8000, #fa0, #ffd500, #ff0, #d4ff00, #af0, #80ff00, #5f0, #2bff00, #0f0, #00ff2a, #0f5, #00ff80, #0fa, #00ffd5, #0ff, #00d5ff, #0af, #0080ff, #05f, #002aff, #00f, #2b00ff, #50f, #8000ff, #a0f, #d400ff, #f0f, #ff00d4, #f0a, #ff0080, #f05, #ff002b, #f00);
+	-webkit-animation: animatedBackground_a 5s linear infinite alternate;
+	/*background-clip: text;*/
+	-webkit-background-clip: text;
+    -webkit-text-fill-color: #0000;
 }
 
-.popup .close{
+@keyframes animatedBackground_a {
+	0% { background-position: 0 0 }
+	100% { background-position: -500px 0 }
+}
+
+  .popup .close {
     position: absolute;
-    top: 0.625rem;
-    right: 0.625rem;
-    -webkit-transition: all 200ms;
-    -o-transition: all 200ms;
+    top: 10px;
+    right: 10px;
     transition: all 200ms;
-    font-size: 1.25rem;
-    font-weight: 400;
-    color: #fff;
-}
+    font-size: 20px;
+    font-weight: bold;
+    color: black;
+  }
 
-.popup .content-1, .content-2{
+  .popup .content-1,
+  .content-2 {
     max-height: 30%;
     overflow: auto;
     text-align: center;
-    color: #fff;
-    list-style: none;
+  }
+
+  .show {
+    visibility: visible !important;
+    opacity: 100 !important;
+  }
+
+
+.memory-game {
+   height: 31.25rem;
+   margin-top: 3.25rem;
+   margin-left: 0.32rem;
+   display: -webkit-box;
+   display: -ms-flexbox;
+   display: flex;
+   -ms-flex-wrap: wrap;
+       flex-wrap: wrap;
+   -webkit-perspective: 62.5rem;
+           perspective: 62.5rem;
+   overflow: hidden;
+   margin-bottom: 3.125rem;
 }
 
-.show{
-    visibility: visible !important;
-    opacity: 1 !important;
+.memory-card {
+  width: calc(25% - 0.625rem);
+   height:  calc(25% - 0.625rem);
+   margin: 0.188rem;
+   position: relative;
+   -webkit-transform: scale(1);
+       -ms-transform: scale(1);
+           transform: scale(1);
+   -webkit-transform-style: preserve-3d;
+           transform-style: preserve-3d;
+   -webkit-transition: -webkit-transform .5s;
+   transition: -webkit-transform .5s;
+   -o-transition: transform .5s;
+   transition: transform .5s;
+   transition: transform .5s, -webkit-transform .5s;
+
 }
+
+.memory-card:active {
+  -webkit-transform: scale(1.1);
+        -ms-transform: scale(1.1);
+            transform: scale(1.1);
+    -webkit-transition: -webkit-transform .3s;
+    transition: -webkit-transform .3s;
+    -o-transition: transform .3s;
+    transition: transform .3s;
+    transition: transform .3s, -webkit-transform .3s;
+}
+
+.memory-card.flip {
+  -webkit-transform: rotateY(180deg);
+  transform: rotateY(180deg);
+}
+.memory-card:hover {
+    cursor: pointer;
+}
+.front-face,
+.back-face {
+  width: 100%;
+    height: 100%;
+    padding: 0.313rem;
+    position: absolute;
+    border-radius: 0.313rem;
+    -webkit-backface-visibility: hidden;
+            backface-visibility: hidden;
+}
+
+.front-face {
+    -webkit-transform: rotateY(180deg);
+            transform: rotateY(180deg);
+}
+.flex {
+    display: flex;
+    flex-direction: row;
+    margin-bottom: 120px;
+}
+.stars{
+  margin: 0;
+  padding: 0;
+  display: inline-block;
+}
+.stars li{
+  list-style: none;
+  display: inline-block;
+  font-size: 20px;
+}
+#starRating li{
+  display: inline-block;
+}
+
+
+/*Animal Info*/
+.select-animal {
+  margin-top: 85px;
+    margin-left: 10px;
+    width: 100vw;
+    height: 50px;
+  }
+
+  .animal-selector{
+    background-color:#96bb7c;
+    
+  }
+
+  .select-animal-header {
+    margin-top: 50px;
+    margin-left: 30px;
+    
+  }
+
+  .col1 {
+    display: block;
+    width: 50%;
+    float: left;
+    height: 100%;
+
+
+  }
+
+  .col2 {
+    display: block;
+    width: 50%;
+    float: right;
+    height: 80%;
+    animation-name : moving;
+    animation-duration: 5s;
+    animation-direction: alternate;
+    animation-fill-mode: forwards;
+  }
+  @keyframes moving{
+    from {transform: scale(0.8);}
+    to {transform: scale(1.0);}
+  }
+  .hide {
+    display: none;
+  }
+
+  .my-info-1 {
+    
+    font-size:18px;
+    padding-bottom: 10px;
+    margin-left: 30px;
+    margin-top: 20px;
+    margin-right: 10px;
+    height: 630px;
+
+  }
+
+  .my-info-1 img{
+
+   width: 85%;
+   height: 70%;
+   margin-top: 30px;
+   margin-left:20px;
+   margin-right: 10px;
+
+}
+
+#animal-select-header {
+  text-align: center;
+  
+  margin-top: 10px;
+}
+
+/*------------------Contact Form*/
+/*-------------------Code for contact form is referred from Rosie resume miniproject*/
+.contact-heading{
+    font-family: "Lato", sans-serif;
+    font-weight: 300;
+    margin-top: 4.375rem;
+    margin-bottom: 1.25rem;
+}
+
+.center-form{
+    padding-top: 0.625rem;
+    margin: 0 auto;
+    max-width: 70%;
+}
+
+button[type="submit"]{
+    margin-top: 1rem;
+    margin-bottom: 1.25rem;
+    background-color: #BD0107;
+    color: #fff;
+}
+
+@media only screen and (min-width:768px){
+    body{
+        font-size:1rem;
+        letter-spacing: 2px;
+          }
+    }
