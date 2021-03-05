@@ -88,9 +88,9 @@ I wanted a simple game that has easy to understand and site is easy to navigate 
 
 #### Surface
 **Colors**
-- The background color is Kaitoke Green![#295939](https://placehold.it/15/dbcbbd/000000?text=+)
-- Navigation bar and Footer bar is Olivine![#96bb7c](https://placehold.it/15/dbcbbd/000000?text=+)
-- Restart button and Music button is Olivine![#96bb7c](https://placehold.it/15/dbcbbd/000000?text=+)
+- The background color is Kaitoke Green![#295939]
+- Navigation bar and Footer bar is Olivine![#96bb7c]
+- Restart button and Music button is Olivine![#96bb7c]
 
 **Libraries**
 - [Bootstrap 4.5](https://getbootstrap.com) - is a framework for building responsive, mobile-first websites.
