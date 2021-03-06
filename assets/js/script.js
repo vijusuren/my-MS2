@@ -12,6 +12,7 @@ let starsList = document.querySelectorAll(".stars li");
 let closeicon = document.querySelector(".close");
 let modal = document.getElementById("popup1");
 var  mymusic = document.getElementById("myaudio");
+var isplaying = false;
 const finish = new Audio("assets/sound/finish.wav");
 const getMoves = localStorage.getItem('moves')+1
 var timeron =true;
