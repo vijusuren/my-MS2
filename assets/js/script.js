@@ -11,11 +11,8 @@ const stars = document.querySelectorAll(".fa-star");
 let starsList = document.querySelectorAll(".stars li");
 let closeicon = document.querySelector(".close");
 let modal = document.getElementById("popup1");
-var  mymusic = document.getElementById("music");
+var  mymusic = document.getElementById("myaudio");
 const finish = new Audio("assets/sound/finish.wav");
-//const roar = new Audio("assets/sounds/roar.mp3");
-//const flip = new Audio("assets/sounds/flip.mp3");
-//const finish = new Audio("assets/sounds/finish.mp3");
 const getMoves = localStorage.getItem('moves')+1
 var timeron =true;
 var time=0;
@@ -24,11 +21,14 @@ var minutes;
 var seconds;
 
 function play(){
-    mymusic.play();
+     isplaying ? mymusic.pause() : mymusic.play();
 }
-function pause(){
-  mymusic.pause();
-}
+mymusic.onplaying = function(){
+  isplaying=true;
+};
+mymusic.onpause = function(){
+  isplaying=false;
+};
 
 
 function flipCard() {
