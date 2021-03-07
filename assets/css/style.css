@@ -387,7 +387,8 @@ button[type="submit"]{
           }
     }
 @media only screen and (min-width:280px){
-  .popup{
-    font-size:10px;
-  }
+    .popup {
+        width:100%;
+        padding:2%;
+    }
 }
