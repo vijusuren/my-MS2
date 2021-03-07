@@ -317,20 +317,7 @@ footer {
     
   }
 
-  .col1 {
-    display: block;
-    width: 50%;
-    float: left;
-    height: 100%;
-
-
-  }
-
-  .col2 {
-    display: block;
-    width: 50%;
-    float: right;
-    height: 80%;
+  .imageani {
     animation-name : moving;
     animation-duration: 5s;
     animation-direction: alternate;
@@ -399,3 +386,8 @@ button[type="submit"]{
         letter-spacing: 2px;
           }
     }
+@media only screen and (min-width:280px){
+  .popup{
+    font-size:10px;
+  }
+}
