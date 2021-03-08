@@ -120,14 +120,15 @@ and the third link is contact, which is connected to the third-page **contact.ht
 
 The home page is having the game board which is 4X4 grid with a total of 16 images. 
 The back image is of animal zoo and front image is of 8 different animal.
-    * Cheetah
-    * Deer
-    * Giraffe
-    * Hippopotamus
-    * Lion
-    * Rabbit
-    * Tiger
-    * Zebra
+
+* Cheetah
+* Deer
+* Giraffe
+* Hippopotamus
+* Lion
+* Rabbit
+* Tiger
+* Zebra
 
 The heading has name of the game and instruction abut how to play the game.
 
@@ -219,8 +220,18 @@ cards and more animal depending on the level selected.
 ### Testing User Stories
 
 1. As a user, I want to find the game a challenge but not hard.
+
     * The game is very simple memory game with no hard level.The instruction are given below the heading.
-    Easily uderstand by both kids and adults.
+      Easily uderstand by both the kids and adults.
     * The moves and matches display in the side of the screen. If they are playing on mobile it will display in the top of the page.
     
-- 
+2. As a user, I want to learn some intersting information about animal.
+
+    * The second page of the site is information about animal. User can learn some interesting facts about animal.
+    * Tested dropdown menu on all devices to make sure it showed ok.
+    * Tested images on second page are animates on all devices.
+
+3. As a user, I want to know how much moves I took to finish the game.
+
+    * Tested the moves in the game counted correctly and also display moves in congratulation popup window.
+    * Tested the stars for the game counted correctly and also display stars in congratulation popup window.
