@@ -54,6 +54,7 @@ From the User perspective:-
 - As a user, I want to learn some intersting information about animal.
 - As a user, I want to know how much moves I took to finish the game.
 - As a user, I want to restart my game if I make a mistake.
+- As a user, I want to have some background music.
 - As a user, I want to contact the game maker and give my feedback.
 - As a user, I want to the website to make me want to visit and play the game again. 
 
@@ -216,7 +217,32 @@ cards and more animal depending on the level selected.
 ##### back to [top](#table-of-contents)
 ---
 
-## Testing 
+## Testing
+
+[W3C Markup Validation Service](https://validator.w3.org/)
+
+* W3C markup validation service is used for the testing of the **HTML** of all 3 HTML pages and **no error** was found.
+
+* [Home_page](https://validator.w3.org/nu/#textarea)
+* [Animalinfo_page](https://validator.w3.org/nu/#textarea)
+* [Contact_page](https://validator.w3.org/nu/#textarea)
+
+[W3C CSS Validation Service](https://jigsaw.w3.org/css-validator/)
+
+* W3 CSS validation service is used for the testing of the **CSS** of the project and no error was found.
+
+* [style.css](https://jigsaw.w3.org/css-validator/validator).This file shows on error .animated_rainbow_1 liner is not a animation value
+
+[JSHint](https://jshint.com/)
+
+* JSHint, a JavaScript code quality tool was used to test the **JavaScript** codes of all 3 js pages from the project.
+
+* [script.js](assets/image/scriptjs-result.JPG)
+* [animalinfo.js](assets/image/animalinfojs.JPG)
+* [contact.js](assets/image/contactjs-result.JPG)
+
+*  The website was tested on all browser and worked correctly.
+
 ### Testing User Stories
 
 1. As a user, I want to find the game a challenge but not hard.
@@ -235,3 +261,27 @@ cards and more animal depending on the level selected.
 
     * Tested the moves in the game counted correctly and also display moves in congratulation popup window.
     * Tested the stars for the game counted correctly and also display stars in congratulation popup window.
+4. As a user, I want to restart my game if I make a mistake.
+    
+    * Tested restart button works correctly. 
+    * It resets the game board and starts the new game.
+
+5. As a user, I want to have some background music.
+
+    * Tested music button is works correctly.
+    * When click on music button music will play when click again music will stop.
+
+6. As a user, I want to contact the game maker and give my feedback.
+
+    *  Tested the contact form works correctly.
+    *  Tested Submit button on Contact page without any text in inputs to ensure that it provides 
+    the desired error of 'Please fill out this field' to appropriate required fields.
+    *  Tested Submit button on Contact page without any text in inputs to ensure that it provides 
+    the desired error of 'Please fill out this field' to appropriate required fields.
+    * Once filled everything click on submit button mail will send to game maker and display alert message "Thanks for your feedback"
+    * After the submit button is changed to Feedback sent!.
+
+7. As a user, I want to the website to make me want to visit and play the game again.
+
+    *  Tested the website is working correctly.
+
