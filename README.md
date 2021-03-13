@@ -1,5 +1,6 @@
 # Animal Flip
 ## A Memory Game Website created by Vijayalakshmi Dhandapani
+[View live site here](https://vijusuren.github.io/my-MS2/)
 ### [GitHub](https://github.com/vijusuren/my-MS2)
 ![Responsive-view](assets/image/Capture.PNG)
 # Milestone Project 2
@@ -21,6 +22,7 @@
 
 * [**Testing**](#testing)
   - [**Validators**](#validators)
+  - [**Testing User Stories**](#testing user stories)
 
 * [**Deployment**](#deployment)
 
@@ -218,7 +220,7 @@ cards and more animal depending on the level selected.
 ---
 
 ## Testing
-
+### Validators
 [W3C Markup Validation Service](https://validator.w3.org/)
 
 * W3C markup validation service is used for the testing of the **HTML** of all 3 HTML pages and **no error** was found.
@@ -285,3 +287,59 @@ cards and more animal depending on the level selected.
 
     *  Tested the website is working correctly.
 
+## Deployment
+### Deploying my project
+
+I created my project on GitHub and used GitPod's development environment to write my code.
+Use the following link to view my live project: [Animal Flip Game](https://vijusuren.github.io/my-MS2/)
+
+### Deploying to GitHub Pages
+To make my project viewable to others, I deployed my project to GitHub Pages with the following process:
+
+1. Got to [Github](https://github.com/) and log in.
+2. Then go to [https://github.com/vijusuren/my-MS2](https://vijusuren.github.io/my-MS2/).
+3. Click [Settings](https://vijusuren.github.io/my-MS2/settings) in the tab menu above the content area.
+3. Scroll to GitHub pages-section.
+4. Then choose Master Branch from the source dropdown menu.
+5. Click to confirm my selection, and then it's live.
+
+To Clone this project from the GitHub:
+
+1. Go to [https://github.com/vijusuren/my-MS2](https://vijusuren.github.io/my-MS2/).
+2. Click the “Code”-button and copy the http-address.
+3. Open Gitpod and open a new terminal, terminal → new terminal.
+4. In the terminal, paste the code and press enter.
+
+More information about this process can be found on the following link: [Configuring a publishing source for your GitHub Pages site](https://help.github.com/en/github/working-with-github-pages/configuring-a-publishing-source-for-your-github-pages-site)
+##### back to [top](#table-of-contents)
+---
+
+## Credits
+### Contents
+
+The content of this website from google got on image and fun fact about animals from google.
+
+* The picture used in this website are taken from Google.
+* The details for Fun Fact about animal are taken from (https://www.earthrangers.com/) & (https://www.folly-farm.co.uk/zoo/)
+* The Music used in this website are taken from (https://www.fesliyanstudios.com/royalty-free-music/downloads-c/happy-music/2) & 
+(https://mixkit.co/free-sound-effects/applause/)
+
+### Code
+
+* The CDN links for Bootstrap, Font Awesome, Hover, Javascript, and jQuery were copied from http://cdnjs.com/
+* Code used in making Navbar is copied from [Bootstrap Navbar](https://getbootstrap.com/docs/4.5/components/navbar/)
+* Code used in making Contact Form and Footer are referred from Rosie-Resume Mini project of Code institute.
+* Code Institute Rosie Resume project is also used for help in EmailJS codes and configuration.
+* I have seen many Memory games made by my fellow students of Code Institute and understood the concept.
+* https://www.html-code-generator.com/html/rainbow-text-generator I used this site to make rainbow text for congratulation popup window.
+* https://marina-ferreira.github.io/projects/js/memory-game/ I used this site to make memory game.
+* https://www.geeksforgeeks.org/how-to-shuffle-an-array-using-javascript/ I used this site to shuffle it.
+
+## Acknowledgements
+
+Thank you to the following people who helped to complete this site.
+
+- The guidance and support from mentor Mr.Adegbenga Adeye
+- The support team Code Institude.
+- The Slact community.
+##### back to [top](#table-of-contents)
