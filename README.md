@@ -2,7 +2,7 @@
 ## A Memory Game Website created by Vijayalakshmi Dhandapani
 [View live site here](https://vijusuren.github.io/my-MS2/)
 ### [GitHub](https://github.com/vijusuren/my-MS2)
-![Responsive-view](assets/image/Capture.PNG)
+![Responsive-view](assets/image/display.PNG)
 # Milestone Project 2
 ## Table of Contents
 * [**Project overview**](#project-overview)
@@ -16,19 +16,19 @@
 
 * [**Features**](#features)
   - [**Existing Features**](#existing-features)
-  - [**Features Left to Implement**](#features-left-to-implemement)
+  - [**Features Left to Implement**](#features-left-to-implement)
 
 * [**Technologies Used**](#technologies-used)
 
 * [**Testing**](#testing)
   - [**Validators**](#validators)
-  - [**Testing User Stories**](#testing user stories)
+  - [**Testing User Stories**](#testing-user-stories)
 
 * [**Deployment**](#deployment)
 
 * [**Credits**](#credits)
   - [**Content**](#content)
-  - [**Media**](#media)
+  - [**Code**](#code)
   - [**Acknowledgements**](#acknowledgements)
 
 ## Project Overview
@@ -84,27 +84,31 @@ I wanted a simple game that has easy to understand and site is easy to navigate 
 - The footer section will be fixed at the bottom having link to social network.
 
 #### Skeleton
-**Wireframes**
-- [Home Page](assets/wireframe/home_page.pdf)
-- [Animal Info](assets/wireframe/animal_info.pdf)
-- [Contact Page](assets/wireframe/contact_page.pdf)
+## Wireframes 
+- [Home Page](assets/wireframe/Home_page.pdf)
+- [Animal Info](assets/wireframe/Animalinfo_page.pdf)
+- [Contact Page](assets/wireframe/Contact_page.pdf)
 
 #### Surface
-**Colors**
+## Colour Scheme
 - The background color is Kaitoke Green![#295939]
 - Navigation bar and Footer bar is Olivine![#96bb7c]
 - Restart button and Music button is Olivine![#96bb7c]
 
-**Libraries**
+## Libraries
 - [Bootstrap 4.5](https://getbootstrap.com) - is a framework for building responsive, mobile-first websites.
 
 - [Google Font](https://fonts.google.com/) - is a font application.
 
-**Images**:
-Images are from google.
+## Images :
+    
+- All the Images are from google.
+- Image of Animals from google.
+- Card back image from (https://images.all-free-download.com/images/graphicthumb/zoo_cute_vector_148146.jpg)
 
 **Sound**:
-The background music is from www.fesliyanstudios.com/happy-music.
+    
+- The background music is from (www.fesliyanstudios.com/happy-music).
 
 ##### back to [top](#table-of-contents)
 ---
@@ -286,6 +290,8 @@ cards and more animal depending on the level selected.
 7. As a user, I want to the website to make me want to visit and play the game again.
 
     *  Tested the website is working correctly.
+##### back to [top](#table-of-contents)
+---
 
 ## Deployment
 ### Deploying my project
@@ -315,7 +321,7 @@ More information about this process can be found on the following link: [Configu
 ---
 
 ## Credits
-### Contents
+### Content
 
 The content of this website from google got on image and fun fact about animals from google.
 
