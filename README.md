@@ -239,13 +239,20 @@ cards and more animal depending on the level selected.
 
 * [style.css](https://jigsaw.w3.org/css-validator/validator).This file shows on error .animated_rainbow_1 liner is not a animation value
 
-[JSHint](https://jshint.com/)
+[Beautifytools](https://beautifytools.com/javascript-validator.php)
 
-* JSHint, a JavaScript code quality tool was used to test the **JavaScript** codes of all 3 js pages from the project.
+* This beautifytools.com is online JavaScript code validator tool was used to test the **JavaScript** codes of all 3 js pages from the project.
 
-* [script.js](assets/image/scriptjs-result.JPG)
-* [animalinfo.js](assets/image/animalinfojs.JPG)
-* [contact.js](assets/image/contactjs-result.JPG)
+* [script.js](assets/image/scriptjs.JPG) After running the script.js file through beautifytools.com, some 
+warnings were appearing, that "let" and "const" is available in ES6 or use Mozilla extension. So I replaced 
+all let and const variables by "var" and that warnings are gone. Still, some warnings about Arrow function 
+syntax is appearing, which can be ignored.
+
+* [animalinfo.js](assets/image/animalinfojs.JPG) After running the animalinfo.js file through beautifytools.com, it 
+shows $ is not defined because this file is mainly made by JQuery so error can be ignored.
+
+* [contact.js](assets/image/contactjs.JPG) After running the contact.js file through beautigytools.com, it
+shows error like defined but never used, which can be ignored.
 
 *  The website was tested on all browser and worked correctly.
 

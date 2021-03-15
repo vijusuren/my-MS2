@@ -8,4 +8,4 @@ $(document).on('change', '.animal-selector', function() {
   $(document).ready(function(){
       $('.animal-selector').trigger('change');
   });
-const lion = new Audio("assets/sound/lion.wav");
+
