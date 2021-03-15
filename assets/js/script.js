@@ -1,20 +1,20 @@
-const cards = document.querySelectorAll('.memory-card');
+var cards = document.querySelectorAll('.memory-card');
 
-let hasFlippedCard = false;
-let lockBoard = false;
-let firstCard, secondCard;
-let moves=0;
-let count=0;
-let counter = document.querySelector(".moves-counter");
-let counter2 = document.querySelector(".count-counter");
-const stars = document.querySelectorAll(".fa-star");
-let starsList = document.querySelectorAll(".stars li");
-let closeicon = document.querySelector(".close");
-let modal = document.getElementById("popup1");
+var hasFlippedCard = false;
+var lockBoard = false;
+var firstCard, secondCard;
+var moves=0;
+var count=0;
+var counter = document.querySelector(".moves-counter");
+var counter2 = document.querySelector(".count-counter");
+var stars = document.querySelectorAll(".fa-star");
+var starsList = document.querySelectorAll(".stars li");
+var closeicon = document.querySelector(".close");
+var modal = document.getElementById("popup1");
 var  mymusic = document.getElementById("myaudio");
 var isplaying = false;
-const finish = new Audio("assets/sound/finish.wav");
-const getMoves = localStorage.getItem('moves')+1
+var finish = new Audio("assets/sound/finish.wav");
+var getMoves = localStorage.getItem('moves')+1;
 var timeron =true;
 var time=0;
 var timer;
@@ -57,7 +57,7 @@ this.classList.add('flip');
 }
 
 function checkForMatch() {
-  let isMatch = firstCard.dataset.framework === secondCard.dataset.framework;
+  var isMatch = firstCard.dataset.framework === secondCard.dataset.framework;
 
   isMatch ? disableCards() : unflipCards();
 }
@@ -68,7 +68,7 @@ function disableCards() {
   countCounter();
   //roar.play();
   resetBoard();
-  localStorage.setItem = ('moves')+1
+  localStorage.setItem = ('moves')+1;
   congrats();
 }
 
@@ -90,7 +90,7 @@ function resetBoard() {
 
 (function shuffle() {
   cards.forEach(card => {
-    let randomPos = Math.floor(Math.random() * 16);
+    var randomPos = Math.floor(Math.random() * 16);
     card.style.order = randomPos;
   });
 })();
@@ -124,7 +124,7 @@ function countCounter() { // counts the matches to work out when the modal shoul
 function startTimer(){
   timer = setInterval (function(){
     time++;
-    minutes = ("0" + Math.floor(time / 60)).slice(-2)
+    minutes = ("0" + Math.floor(time / 60)).slice(-2);
     seconds = ("0" + (time % 60)).slice(-2);
     document.querySelector(".timer").innerHTML = minutes + ":" + seconds;
   },1000);
@@ -133,7 +133,7 @@ function startTimer(){
 function congrats() { // congrats modal, displays when matches = 8
     if (count == 8) {
         modal.classList.add("show");
-      //  roar.pause();
+
         finish.play();
 
         var starRating = document.querySelector(".stars").innerHTML;
@@ -144,7 +144,7 @@ function congrats() { // congrats modal, displays when matches = 8
         document.getElementById("timerDisplay").innerHTML = timerDisplay;
         mymusic.pause();
         closeModal();
-    };
+    }
 }
 
 function closeModal() { // close modal button
