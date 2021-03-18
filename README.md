@@ -21,7 +21,7 @@
 * [**Technologies Used**](#technologies-used)
 
 * [**Testing**](#testing)
-  - [**Validators**](#validators)
+  - [**Validation**](#validation)
   - [**Testing User Stories**](#testing-user-stories)
 
 * [**Deployment**](#deployment)
@@ -34,14 +34,14 @@
 ## Project Overview
 This Website was created for the purpose of completing the Second Milestone Project for the Code Institute's Full Stack Developer Course.
 The purpose of this project is to make a fun memory game for both kids and adults.Kids will enjoy the interactive game with beautiful images 
-and mild sound clips, and adults can also enjoying while playing. There is fun facts about each and every animals sure to learn something intersting about animal.
+and mild sound clips, and adults can also enjoying while playing. There are fun facts about each and every animals sure to learn something interesting about animal.
 
 ## UX 
 ### User Goals
 - Display and work on all devices from large screen monitors, Laptops to tablets and phones.
-- Provide an interactive scoring game for animals that would challenge the users memory.
+- Provide an interactive scoring game for animals that would challenge the user's memory.
 - Provide fun facts about animals based on the pictures in the memory game.
-- Provide a contact page for a user to receive new updates of upcoming gmaes.
+- Provide a contact page for a user to receive new updates of upcoming games.
 
 ### User Stories
 From the designer perspective:-
@@ -53,7 +53,7 @@ From the designer perspective:-
 
 From the User perspective:-
 - As a user, I want to find the game a challenge but not hard.
-- As a user, I want to learn some intersting information about animal.
+- As a user, I want to learn some interesting information about animal.
 - As a user, I want to know how much moves I took to finish the game.
 - As a user, I want to restart my game if I make a mistake.
 - As a user, I want to have some background music.
@@ -62,12 +62,12 @@ From the User perspective:-
 
 ### Design
 #### Strategy
-The main aim to build this game is to test my knowledge of **Javascript** and learn more in the building process. To select Animal for memory games because animals are easily attract by both kids and adults.
+The main aim to build this game is to test my knowledge of **JavaScript** and learn more in the building process. To select Animal for memory games because animals are easily attracted by both kids and adults.
 I wanted a simple game that has easy to understand and site is easy to navigate through.
 
 #### Scope
 - I wanted to make a memory game that is easy to play and images should be different from each other so that it will test the memory of the user.
-- There will be one Restart button to restart the game and Music button to control the backgorund music.
+- There will be one Restart button to restart the game and Music button to control the background music.
 - Timer will be there to show the time taken to complete the game in minutes and seconds.
 - After finishing the game popup message will occur with claps sound shows the Moves taken, Stars and Time taken to complete the game.
 - Animal Info page site have the information about animals.
@@ -79,7 +79,7 @@ I wanted a simple game that has easy to understand and site is easy to navigate 
 - The Header section will have Introduction of the game, How to play instructions, Moves and match counter.
 - The timer to show the game timing in minutes and seconds.
 - The star counter (which will show 3 stars for less than 14 moves, 2 stars for moves between 14 and 22, and 1 star for moves more than 23). 
-- The first page memory game will be on Home page. The second page will be Animal Info contains some some information about animal.
+- The first page memory game will be on Home page. The second page will be Animal Info contains some  information about animal.
 - The last page will be the contact page to give the feedback about the game and website.
 - The footer section will be fixed at the bottom having link to social network.
 
@@ -137,7 +137,7 @@ The back image is of animal zoo and front image is of 8 different animal.
 * Tiger
 * Zebra
 
-The heading has name of the game and instruction abut how to play the game.
+The heading has named of the game and instruction abut how to play the game.
 
 **Moves and matches counter** shows how many moves have been made and how many matches have been done.
 
@@ -158,7 +158,7 @@ The timer in the modal shows the time taken to complete the game.
 **Animal Info Page**
 
 The second page of the website is the information page about animal. 
-This has one dropdown box to select a animal, and after selection, the page will show the 
+This has one drop down box to select a animal, and after selection, the page will show the 
 **Fun Facts** and one big **Image** of the selected animal. 
 
 **Contact Page**
@@ -176,23 +176,23 @@ The footer is pinned to the bottom of all three pages and it has a link to socia
 
 - Navigation bar is fixed on top, the page links are grey and when hovered or chosen page is live and these are colored with white.
 - The game board contains a grid which stays the same grid on all devices from large screen devices to tablets and phones.
-- When a card is clicked it trunaround and show the image of animal user can remember where animal are to match the pair.
+- When a card is clicked it turnaround and show the image of animal user can remember where animal are to match the pair.
 - The number of moves and matches are counted.
 - The star rating also updated depending on the number of moves as a user can complete the game. This feature is added
 to give feedback to the player about their game.
 - Timer is added which starts with first card clicked and it will show the time taken to complete the game.
 - The Restart button is added to reset the game board and restart the game. 
 - The Music button is added to play the background music, which is mute automatically when the game finish.
-- In the animal info page dropdown box is added with list of animals in it to be selected.
-- The fun facts is added as a user they can learn some intersting information about animal.
+- In the animal info page drop down box is added with list of animals in it to be selected.
+- The fun facts is added as a user they can learn some interesting information about animal.
 - The Contact form is added in the contact page to get feedback about the game.
 
 ### Features Left to Implement
 
-- A popup section to be added for Easy,Medium and Hard level of game. This would allow to extended the grid to more
+- A popup section to be added for Easy, Medium and Hard level of game. This would allow to extend the grid to more
 cards and more animal depending on the level selected.
 - The sound effects and moving animation of Image would be added in the animalinfo page.
-- Userboard to be added to display list of user who completed the game in less moves and time.
+- User board to be added to display list of user who completed the game in less moves and time.
 
 ##### back to [top](#table-of-contents)
 ---
@@ -224,7 +224,7 @@ cards and more animal depending on the level selected.
 ---
 
 ## Testing
-### Validators
+### Validation
 [W3C Markup Validation Service](https://validator.w3.org/)
 
 * W3C markup validation service is used for the testing of the **HTML** of all 3 HTML pages and **no error** was found.
@@ -237,21 +237,21 @@ cards and more animal depending on the level selected.
 
 * W3 CSS validation service is used for the testing of the **CSS** of the project and no error was found.
 
-* [style.css](https://jigsaw.w3.org/css-validator/validator).This file shows on error .animated_rainbow_1 liner is not a animation value
+* [style.css](https://jigsaw.w3.org/css-validator/validator). This file shows on error .animated_rainbow_1 liner is not a animation value
 
 [Beautifytools](https://beautifytools.com/javascript-validator.php)
 
-* This beautifytools.com is online JavaScript code validator tool was used to test the **JavaScript** codes of all 3 js pages from the project.
+* This beautifytools.com is online JavaScript code validation tool was used to test the **JavaScript** codes of all 3 js pages from the project.
 
-* [script.js](assets/image/scriptjs.JPG) After running the script.js file through beautifytools.com, some 
-warnings were appearing, that "let" and "const" is available in ES6 or use Mozilla extension. So I replaced 
+* [script.js](assets/image/Scriptjs.PNG) After running the script.js file through beautifytools.com, some 
+warnings were displaying, that "let" and "const" is available in ES6 or use Mozilla extension. So I replaced 
 all let and const variables by "var" and that warnings are gone. Still, some warnings about Arrow function 
-syntax is appearing, which can be ignored.
+syntax is displaying, which can be ignored.
 
-* [animalinfo.js](assets/image/animalinfojs.JPG) After running the animalinfo.js file through beautifytools.com, it 
+* [animalinfo.js](assets/image/animalinfojs.PNG) After running the animalinfo.js file through beautifytools.com, it 
 shows $ is not defined because this file is mainly made by JQuery so error can be ignored.
 
-* [contact.js](assets/image/contactjs.JPG) After running the contact.js file through beautigytools.com, it
+* [contact.js](assets/image/contactjs.PNG) After running the contact.js file through beautigytools.com, it
 shows error like defined but never used, which can be ignored.
 
 *  The website was tested on all browser and worked correctly.
@@ -261,10 +261,10 @@ shows error like defined but never used, which can be ignored.
 1. As a user, I want to find the game a challenge but not hard.
 
     * The game is very simple memory game with no hard level.The instruction are given below the heading.
-      Easily uderstand by both the kids and adults.
+      Easily understand by both the kids and adults.
     * The moves and matches display in the side of the screen. If they are playing on mobile it will display in the top of the page.
     
-2. As a user, I want to learn some intersting information about animal.
+2. As a user, I want to learn some interesting information about animal.
 
     * The second page of the site is information about animal. User can learn some interesting facts about animal.
     * Tested dropdown menu on all devices to make sure it showed ok.
@@ -292,7 +292,7 @@ shows error like defined but never used, which can be ignored.
     *  Tested Submit button on Contact page without any text in inputs to ensure that it provides 
     the desired error of 'Please fill out this field' to appropriate required fields.
     * Once filled everything click on submit button mail will send to game maker and display alert message "Thanks for your feedback"
-    * After the submit button is changed to Feedback sent!.
+    * After that submit button is changed to Feedback sent!.
 
 7. As a user, I want to the website to make me want to visit and play the game again.
 
@@ -353,6 +353,6 @@ The content of this website from google got on image and fun fact about animals 
 Thank you to the following people who helped to complete this site.
 
 - The guidance and support from mentor Mr.Adegbenga Adeye
-- The support team Code Institude.
+- The support team Code Institute.
 - The Slact community.
 ##### back to [top](#table-of-contents)
