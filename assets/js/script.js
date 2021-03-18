@@ -1,5 +1,4 @@
 var cards = document.querySelectorAll('.memory-card');
-
 var hasFlippedCard = false;
 var lockBoard = false;
 var firstCard, secondCard;
@@ -8,22 +7,17 @@ var count=0;
 var counter = document.querySelector(".moves-counter");
 var counter2 = document.querySelector(".count-counter");
 var stars = document.querySelectorAll(".fa-star");
-var starsList = document.querySelectorAll(".stars li");
 var closeicon = document.querySelector(".close");
 var modal = document.getElementById("popup1");
 var  mymusic = document.getElementById("myaudio");
-var isplaying = false;
+var isplaying;
 var finish = new Audio("assets/sound/finish.wav");
-var getMoves = localStorage.getItem('moves')+1;
 var timeron =true;
 var time=0;
 var timer;
 var minutes;
 var seconds;
 
-function play(){
-     isplaying ? mymusic.pause() : mymusic.play();
-}
 mymusic.onplaying = function(){
   isplaying=true;
 };
@@ -148,7 +142,7 @@ function congrats() { // congrats modal, displays when matches = 8
 }
 
 function closeModal() { // close modal button
-    closeicon.addEventListener("click", function (e) {
+    closeicon.addEventListener("click", function () {
         modal.classList.remove("show");
         restart();
     });
