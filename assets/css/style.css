@@ -127,7 +127,7 @@ footer {
   }
 
   .moves-counter {
-    margin-left: 10px;
+    margin-left: 30px;
   }
   .restart-btn {
   font-size: 20px;
@@ -137,6 +137,10 @@ footer {
 }
 .play-btn {
   background-color: #96bb7c;
+}
+.col-lg-6{
+    padding-right: 0px!important;
+    padding-left: 0px!important;
 }
 
 /*Overlay for Sign Up Page*/
