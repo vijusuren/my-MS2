@@ -127,7 +127,7 @@ footer {
   }
 
   .moves-counter {
-    margin-left: 30px;
+    margin-left: 20px;
   }
   .restart-btn {
   font-size: 20px;
@@ -394,4 +394,9 @@ button[type="submit"]{
         width:100%;
         padding:2%;
     }
+@media only screen and (max-width:280px){
+    .count-counter {
+        margin-left: 60px;
+    }
+}
 }
