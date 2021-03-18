@@ -1,232 +1,202 @@
 <!DOCTYPE html>
 <html lang="en">
- <head>
-   <meta charset="UTF-8">
-   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-   <meta http-equiv="X-UA-Compatible" content="ie=edge">
-   <title>Animal Flip Game</title>
-   <!--Google Fonts-->
-   <link rel="preconnect" href="https://fonts.gstatic.com">
-   <link href="https://fonts.googleapis.com/css2?family=Gilda+Display&display=swap" rel="stylesheet">
- <!--CSS, Botstrap-->
-   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
-   <!--Font Awesome-->
-   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.0/css/all.min.css">
-<!--Hover.css-->
-   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/hover.css/2.3.1/css/hover-min.css" />
-<!--Internal CSS link-->
-   <link rel="stylesheet" href="assets/css/style.css">
- </head>
- <body>
-<!--Navigation-->
-  <header>
-    <!--Navigation is copied from https://getbootstrap.com/docs/4.5/components/navbar/ -->
-    <nav class="navbar navbar-expand-md navbar-dark fixed-top">
-        <a class="navbar navbar-brand" href="index.html">Animal Flip</a>
-        <button class="navbar-toggler" aria-expanded="false" aria-controls="navbarNavDropDown"
-            aria-label="Toggle navigation" type="button" data-target="#navbarNavDropDown" data-toggle="collapse">
+   <head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta http-equiv="X-UA-Compatible" content="ie=edge">
+      <title>Animal Flip Game</title>
+      <!--Google Fonts-->
+      <link rel="preconnect" href="https://fonts.gstatic.com">
+      <link href="https://fonts.googleapis.com/css2?family=Gilda+Display&display=swap" rel="stylesheet">
+      <!--CSS, Botstrap-->
+      <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+      <!--Font Awesome-->
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.0/css/all.min.css">
+      <!--Hover.css-->
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/hover.css/2.3.1/css/hover-min.css" />
+      <!--Internal CSS link-->
+      <link rel="stylesheet" href="assets/css/style.css">
+   </head>
+   <body>
+      <!--Navigation-->
+      <header>
+         <!--Navigation is copied from https://getbootstrap.com/docs/4.5/components/navbar/ -->
+         <nav class="navbar navbar-expand-md navbar-dark fixed-top">
+            <a class="navbar navbar-brand" href="index.html">Animal Flip</a>
+            <button class="navbar-toggler" aria-expanded="false" aria-controls="navbarNavDropDown"
+               aria-label="Toggle navigation" type="button" data-target="#navbarNavDropDown" data-toggle="collapse">
             <span class="custom-navbar-toggler-icon">
-                <i class="fas fa-bars"></i>
+            <i class="fas fa-bars"></i>
             </span>
-        </button>
-        <div class="collapse navbar-collapse justify-content-end" id="navbarNavDropDown">
-            <ul class="navbar-nav">
-                <li class="nav-item  mr-4">
-                    <a class="nav-link" href="index.html">Home</a>
-                </li>
-                <li class="nav-item mr-4">
-                    <a class="nav-link active" href="animalinfo.html">Animal Info</a>
-                </li>
-                <li class="nav-item mr-4">
-                    <a class="nav-link" href="contact.html">Contact</a>
-                </li>
-            </ul>
-        </div>
-    </nav>
-  </header>
-<!--Navigation ends-->
-<!---Select Animal-->
-<div class="select-animal">
-            <span class="select-animal-header">Please Select Animals:
-            </span>
-            <select class="animal-selector" name="animal-selector" data-target=".my-info-1">
-
-                <option value="cheetah" data-show=".cheetah">Cheetah</option>
-
-                <option value="deer" data-show=".deer">Deer</option>
-
-                <option value="giraffe" data-show=".giraffe">Giraffe</option>
-
-                <option value="hippopotamus" data-show=".hippopotamus">Hippopotamus</option>
-
-                <option value="lion" data-show=".lion">Lion</option>
-
-                <option value="rabbit" data-show=".rabbit">Rabbit</option>
-
-                <option value="tiger" data-show=".tiger">Tiger</option>
-
-                <option value="zebra" data-show=".zebra">Zebra</option>
-
-            </select>
-  </div>
-
-  <div class="row">
-           <div>
-               <h3 id="animal-select-header">Fun Facts</h3>
-               <div class="row my-info-1 tiger hide">
-                   <div class="col-lg-6 pl-4 pt-4 pr-4 funfact">
-                       <div class="mt-4 ml-3">1. Tigers are the largest cat species in the world reaching up to 3.3 meters in length and weighing up to 670 pounds!</div>
-                       <div class="mt-4 ml-3">2. Tigers are easily recognizable with their dark vertical stripes and reddish/orange fur.</div>
-                       <div class="mt-4 ml-3">3. The Bengal tiger is the most common tiger.</div>
-                       <div class="mt-4 ml-3">4. Tigers live between 20-26 years in the wild.</div>
-                       <div class="mt-4 ml-3">5. Cubs are born blind and only open their eyes 1-2 weeks after birth.</div>
-                   </div>
-
-                   <div class="col-lg-6 imageani"><img src="./assets/image/tiger1.jpg" alt="tiger">
-                      </div>
-
-               </div>
-
-               <div class="row my-info-1 cheetah hide">
-                    <div class="col-lg-6 pl-4 pt-4 pr-4 funfact">
-                        <div class="mt-4 ml-3">1. Cheetahs are the fastest land mammal in the world!</div>
-                        <div class="mt-4 ml-3">2. Cheetahs weigh between 69 to 140 pounds and can be 4 feet (1.2 meters) long.</div>
-                        <div class="mt-4 ml-3">3. Cheetha don't like to fight.</div>
-                        <div class="mt-4 ml-3">4. Cheetah have brilliant eyesight. They can see upto 3miles away!.</div>
-                        <div class="mt-4 ml-3">5. Cheetah hunt in the day time. Cheetahs do not roar like lions or tigers.</div>
-                    </div>
-
-                    <div class="col-lg-6 imageani"><img src="assets/image/chitha1.jpg" alt="cheetah">
-                    </div>
-
-                </div>
-
-                <div class="row my-info-1 lion hide">
-                     <div class="col-lg-6 pl-4 pt-4 pr-4 funfact">
-                         <div class="mt-4 ml-3">1. Lions are the only cats that live in groups.A group, or pride, can be up to 30 lions, depending on how much food and water is available.</div>
-                         <div class="mt-4 ml-3">2. Female lions are the main hunters. While they’re out looking for food, the males guard the pride’s territory and their young.</div>
-                         <div class="mt-4 ml-3">3. A lion’s roar can be heard up to eight kilometres away.</div>
-                         <div class="mt-4 ml-3">4. Lions are the laziest of all the big cats, and can sleep for 16-20 hours each day.</div>
-                         <div class="mt-4 ml-3">5. The main two types of lion are the African and the Asian but there are thought to be eight in total. The list are
-                                                      Barbary lion,Asiatic lion,West African lion,Masai lion,Congo lion,Southwest African lion,Transvaal lion,Ethiopian lion.</div>
-                     </div>
-
-                     <div class="col-lg-6 imageani"><img src="assets/image/lion1.jpg" alt="lion">
-                     </div>
-
-                 </div>
-
-                 <div class="row my-info-1 deer hide">
-                      <div class="col-lg-6 pl-4 pt-4 pr-4 funfact">
-                          <div class="mt-4 ml-3">1. Deer are part of the Cervidae family that include moose, reindeer, elk and other species.</div>
-                          <div class="mt-4 ml-3">2. Male deer grow new antlers each year.</div>
-                          <div class="mt-4 ml-3">3. Deer take their first steps within half an hour of their birth.</div>
-                          <div class="mt-4 ml-3">4. A male deer is usually called a ‘buck’. A large male deer is often called ‘stag’.</div>
-                          <div class="mt-4 ml-3">5. A female deer is usually called a ‘doe’. A young deer is usually called a ‘fawn’. A group of deer is known as a ‘herd’.</div>
-                      </div>
-
-                      <div class="col-lg-6 imageani"><img src="assets/image/deer1.jpg" alt="deer">
-                      </div>
-
-                  </div>
-
-                  <div class="row my-info-1 giraffe hide">
-                       <div class="col-lg-6 pl-4 pt-4 pr-4 funfact">
-                           <div class="mt-4 ml-3">1. Giraffes are the tallest mammals on Earth. Their legs alone are taller than many humans—about 6 feet.</div>
-                           <div class="mt-4 ml-3">2. They can run as fast as 35 miles an hour over short distances, or cruise at 10 mph over longer distances.</div>
-                           <div class="mt-4 ml-3">3. Giraffes only need to drink once every few days. Most of their water comes from all the plants they eat.</div>
-                           <div class="mt-4 ml-3">4. Giraffes spend most of their lives standing up; they even sleep and give birth standing up.</div>
-                           <div class="mt-4 ml-3">5. Giraffes only need 5 to 30 minutes of sleep in a 24-hour period!They often achieve that in quick naps that may last only a minute or two at a time.</div>
-                       </div>
-
-                       <div class="col-lg-6 imageani"><img src="assets/image/giraffe1.jpg" alt="giraffe">
-                       </div>
-
-                   </div>
-
-                   <div class="row my-info-1 hippopotamus hide">
-                        <div class="col-lg-6 pl-4 pt-4 pr-4 funfact">
-                            <div class="mt-4 ml-3">1. Hippos are considered the second largest land animal on Earth. Males measure around 3.5m long and 1.5m tall, and can weigh up 3,200kg.</div>
-                            <div class="mt-4 ml-3">2. Hippos are most active at night, when they forage for food. They are herbivores, and eat mostly grass –
-                              and boy do they eat grass! In just one night, they can guzzle down up to 35kg of their favourite grub!.</div>
-                            <div class="mt-4 ml-3">3. Hippos are great swimmers and can hold their breath for up to five minutes underwater.</div>
-                            <div class="mt-4 ml-3">4. Hippos usually live in groups (or “herds”) of around ten to 20 individuals, led by one large dominant male.</div>
-                            <div class="mt-4 ml-3">5.  In the wild hippos live for around 40 years. In captivity, they tend to live longer and may reach up to 50 years old.</div>
-                        </div>
-
-                        <div class="col-lg-6 imageani"><img src="assets/image/hippopotamus1.jpg" alt="hippopotamus">
-                        </div>
-
-                    </div>
-
-                    <div class="row my-info-1 rabbit hide">
-                         <div class="col-lg-6 pl-4 pt-4 pr-4 funfact">
-                             <div class="mt-4 ml-3">1. A baby rabbit is called a kit, a female is called a doe and a male is called a buck.</div>
-                             <div class="mt-4 ml-3">2. Rabbits are very social creatures that live in groups. They live in warrens — a series of tunnels and rooms that they dig underground.</div>
-                             <div class="mt-4 ml-3">3. Rabbits’ eyes are on the sides of their head, meaning they can see almost all the way around them.</div>
-                             <div class="mt-4 ml-3">4. Rabbits are amazing athletes — they can jump as high as 90 centimetres in one leap!.</div>
-                             <div class="mt-4 ml-3">5. One of the world’s best-known rabbits is the Warner Bros cartoon character,
-                               Bugs Bunny — who’s often seen munching on a carrot! In fact, carrots aren’t a natural part of a rabbit’s diet
-                               and can give bunnies an upset stomach if they eat too many.</div>
-                         </div>
-
-                         <div class="col-lg-6 imageani"><img src="assets/image/rabbit1.jpg" alt="rabbit">
-                         </div>
-
-                     </div>
-
-                     <div class="row my-info-1 zebra hide">
-                          <div class="col-lg-6 pl-4 pt-4 pr-4 funfact">
-                              <div class="mt-4 ml-3">1. Our planet is home to three different species of zebra, the plains zebra, Grevy’s zebra and mountain zebra, all three species are native to Africa.</div>
-                              <div class="mt-4 ml-3">2. Closely related to horses, zebras have thick bodies, thin legs, a tufted tail,
-                                and a long head and neck sporting a short mane. And their most famous feature? Their brilliant black-and-white striped coat, of course!</div>
-                              <div class="mt-4 ml-3">3. So why do zebras have stripes? Well, scientists aren’t entirely sure. Their stripes perhaps serve to dazzle
-                                and confuse predators and biting insects, or to control the animal’s body heat. Because each individual’s stripes are unique,
-                                their stripes may also have a social purpose, helping zebras to recognise one other.</div>
-                              <div class="mt-4 ml-3">4. A group of zebras is called a Dazzle.</div>
-                              <div class="mt-4 ml-3">5. Zebra can travel long distances. Zebras are black animals with white strips.</div>
-                          </div>
-
-                          <div class="col-lg-6 imageani"><img src="assets/image/zebra1.jpg" alt="zebra">
-                          </div>
-
-                      </div>
+            </button>
+            <div class="collapse navbar-collapse justify-content-end" id="navbarNavDropDown">
+               <ul class="navbar-nav">
+                  <li class="nav-item  mr-4">
+                     <a class="nav-link" href="index.html">Home</a>
+                  </li>
+                  <li class="nav-item mr-4">
+                     <a class="nav-link active" href="animalinfo.html">Animal Info</a>
+                  </li>
+                  <li class="nav-item mr-4">
+                     <a class="nav-link" href="contact.html">Contact</a>
+                  </li>
+               </ul>
             </div>
-          </div>
-
-<!--Footer-->
-<footer class="container-fluid fixed-bottom">
-  <div id="footer-details" class="row">
-    <div class="col">
-      <ul class="list-inline social-links">
-        <li class="list-inline-items">
-          <a href="https://www.facebook.com/" target="_blank"><i class="fab fa-facebook"></i></a>
-        </li>
-        <li class="list-inline-items">
-          <a href="https://twitter.com/" target="_blank"><i class="fab fa-twitter" aria-hidden="true"></i></a>
-        </li>
-        <li class="list-inline-items">
-          <a href="https://github.com/" target="_blank"><i class="fab fa-github"></i></a>
-        </li>
-      </ul>
+         </nav>
+      </header>
+      <!--Navigation ends-->
+      <!---Select Animal-->
+      <div class="select-animal">
+         <span class="select-animal-header">Please Select Animals:
+         </span>
+         <select class="animal-selector" name="animal-selector" data-target=".my-info-1">
+            <option value="cheetah" data-show=".cheetah">Cheetah</option>
+            <option value="deer" data-show=".deer">Deer</option>
+            <option value="giraffe" data-show=".giraffe">Giraffe</option>
+            <option value="hippopotamus" data-show=".hippopotamus">Hippopotamus</option>
+            <option value="lion" data-show=".lion">Lion</option>
+            <option value="rabbit" data-show=".rabbit">Rabbit</option>
+            <option value="tiger" data-show=".tiger">Tiger</option>
+            <option value="zebra" data-show=".zebra">Zebra</option>
+         </select>
       </div>
+      <div class="row">
+         <div>
+            <h3 id="animal-select-header">Fun Facts</h3>
+            <div class="row my-info-1 tiger hide">
+               <div class="col-lg-6 pl-4 pt-4 pr-4 funfact">
+                  <div class="mt-4 ml-3">1. Tigers are the largest cat species in the world reaching up to 3.3 meters in length and weighing up to 670 pounds!</div>
+                  <div class="mt-4 ml-3">2. Tigers are easily recognizable with their dark vertical stripes and reddish/orange fur.</div>
+                  <div class="mt-4 ml-3">3. The Bengal tiger is the most common tiger.</div>
+                  <div class="mt-4 ml-3">4. Tigers live between 20-26 years in the wild.</div>
+                  <div class="mt-4 ml-3">5. Cubs are born blind and only open their eyes 1-2 weeks after birth.</div>
+               </div>
+               <div class="col-lg-6 imageani"><img src="./assets/image/tiger1.jpg" alt="tiger">
+               </div>
+            </div>
+            <div class="row my-info-1 cheetah hide">
+               <div class="col-lg-6 pl-4 pt-4 pr-4 funfact">
+                  <div class="mt-4 ml-3">1. Cheetahs are the fastest land mammal in the world!</div>
+                  <div class="mt-4 ml-3">2. Cheetahs weigh between 69 to 140 pounds and can be 4 feet (1.2 meters) long.</div>
+                  <div class="mt-4 ml-3">3. Cheetha don't like to fight.</div>
+                  <div class="mt-4 ml-3">4. Cheetah have brilliant eyesight. They can see upto 3miles away!.</div>
+                  <div class="mt-4 ml-3">5. Cheetah hunt in the day time. Cheetahs do not roar like lions or tigers.</div>
+               </div>
+               <div class="col-lg-6 imageani"><img src="assets/image/chitha1.jpg" alt="cheetah">
+               </div>
+            </div>
+            <div class="row my-info-1 lion hide">
+               <div class="col-lg-6 pl-4 pt-4 pr-4 funfact">
+                  <div class="mt-4 ml-3">1. Lions are the only cats that live in groups.A group, or pride, can be up to 30 lions, depending on how much food and water is available.</div>
+                  <div class="mt-4 ml-3">2. Female lions are the main hunters. While they’re out looking for food, the males guard the pride’s territory and their young.</div>
+                  <div class="mt-4 ml-3">3. A lion’s roar can be heard up to eight kilometres away.</div>
+                  <div class="mt-4 ml-3">4. Lions are the laziest of all the big cats, and can sleep for 16-20 hours each day.</div>
+                  <div class="mt-4 ml-3">5. The main two types of lion are the African and the Asian but there are thought to be eight in total. The list are
+                     Barbary lion,Asiatic lion,West African lion,Masai lion,Congo lion,Southwest African lion,Transvaal lion,Ethiopian lion.
+                  </div>
+               </div>
+               <div class="col-lg-6 imageani"><img src="assets/image/lion1.jpg" alt="lion">
+               </div>
+            </div>
+            <div class="row my-info-1 deer hide">
+               <div class="col-lg-6 pl-4 pt-4 pr-4 funfact">
+                  <div class="mt-4 ml-3">1. Deer are part of the Cervidae family that include moose, reindeer, elk and other species.</div>
+                  <div class="mt-4 ml-3">2. Male deer grow new antlers each year.</div>
+                  <div class="mt-4 ml-3">3. Deer take their first steps within half an hour of their birth.</div>
+                  <div class="mt-4 ml-3">4. A male deer is usually called a ‘buck’. A large male deer is often called ‘stag’.</div>
+                  <div class="mt-4 ml-3">5. A female deer is usually called a ‘doe’. A young deer is usually called a ‘fawn’. A group of deer is known as a ‘herd’.</div>
+               </div>
+               <div class="col-lg-6 imageani"><img src="assets/image/deer1.jpg" alt="deer">
+               </div>
+            </div>
+            <div class="row my-info-1 giraffe hide">
+               <div class="col-lg-6 pl-4 pt-4 pr-4 funfact">
+                  <div class="mt-4 ml-3">1. Giraffes are the tallest mammals on Earth. Their legs alone are taller than many humans—about 6 feet.</div>
+                  <div class="mt-4 ml-3">2. They can run as fast as 35 miles an hour over short distances, or cruise at 10 mph over longer distances.</div>
+                  <div class="mt-4 ml-3">3. Giraffes only need to drink once every few days. Most of their water comes from all the plants they eat.</div>
+                  <div class="mt-4 ml-3">4. Giraffes spend most of their lives standing up; they even sleep and give birth standing up.</div>
+                  <div class="mt-4 ml-3">5. Giraffes only need 5 to 30 minutes of sleep in a 24-hour period!They often achieve that in quick naps that may last only a minute or two at a time.</div>
+               </div>
+               <div class="col-lg-6 imageani"><img src="assets/image/giraffe1.jpg" alt="giraffe">
+               </div>
+            </div>
+            <div class="row my-info-1 hippopotamus hide">
+               <div class="col-lg-6 pl-4 pt-4 pr-4 funfact">
+                  <div class="mt-4 ml-3">1. Hippos are considered the second largest land animal on Earth. Males measure around 3.5m long and 1.5m tall, and can weigh up 3,200kg.</div>
+                  <div class="mt-4 ml-3">2. Hippos are most active at night, when they forage for food. They are herbivores, and eat mostly grass –
+                     and boy do they eat grass! In just one night, they can guzzle down up to 35kg of their favourite grub!.
+                  </div>
+                  <div class="mt-4 ml-3">3. Hippos are great swimmers and can hold their breath for up to five minutes underwater.</div>
+                  <div class="mt-4 ml-3">4. Hippos usually live in groups (or “herds”) of around ten to 20 individuals, led by one large dominant male.</div>
+                  <div class="mt-4 ml-3">5.  In the wild hippos live for around 40 years. In captivity, they tend to live longer and may reach up to 50 years old.</div>
+               </div>
+               <div class="col-lg-6 imageani"><img src="assets/image/hippopotamus1.jpg" alt="hippopotamus">
+               </div>
+            </div>
+            <div class="row my-info-1 rabbit hide">
+               <div class="col-lg-6 pl-4 pt-4 pr-4 funfact">
+                  <div class="mt-4 ml-3">1. A baby rabbit is called a kit, a female is called a doe and a male is called a buck.</div>
+                  <div class="mt-4 ml-3">2. Rabbits are very social creatures that live in groups. They live in warrens — a series of tunnels and rooms that they dig underground.</div>
+                  <div class="mt-4 ml-3">3. Rabbits’ eyes are on the sides of their head, meaning they can see almost all the way around them.</div>
+                  <div class="mt-4 ml-3">4. Rabbits are amazing athletes — they can jump as high as 90 centimetres in one leap!.</div>
+                  <div class="mt-4 ml-3">5. One of the world’s best-known rabbits is the Warner Bros cartoon character,
+                     Bugs Bunny — who’s often seen munching on a carrot! In fact, carrots aren’t a natural part of a rabbit’s diet
+                     and can give bunnies an upset stomach if they eat too many.
+                  </div>
+               </div>
+               <div class="col-lg-6 imageani"><img src="assets/image/rabbit1.jpg" alt="rabbit">
+               </div>
+            </div>
+            <div class="row my-info-1 zebra hide">
+               <div class="col-lg-6 pl-4 pt-4 pr-4 funfact">
+                  <div class="mt-4 ml-3">1. Our planet is home to three different species of zebra, the plains zebra, Grevy’s zebra and mountain zebra, all three species are native to Africa.</div>
+                  <div class="mt-4 ml-3">2. Closely related to horses, zebras have thick bodies, thin legs, a tufted tail,
+                     and a long head and neck sporting a short mane. And their most famous feature? Their brilliant black-and-white striped coat, of course!
+                  </div>
+                  <div class="mt-4 ml-3">3. So why do zebras have stripes? Well, scientists aren’t entirely sure. Their stripes perhaps serve to dazzle
+                     and confuse predators and biting insects, or to control the animal’s body heat. Because each individual’s stripes are unique,
+                     their stripes may also have a social purpose, helping zebras to recognise one other.
+                  </div>
+                  <div class="mt-4 ml-3">4. A group of zebras is called a Dazzle.</div>
+                  <div class="mt-4 ml-3">5. Zebra can travel long distances. Zebras are black animals with white strips.</div>
+               </div>
+               <div class="col-lg-6 imageani"><img src="assets/image/zebra1.jpg" alt="zebra">
+               </div>
+            </div>
+         </div>
       </div>
-  </footer>
-  <!-- Jquery/Boostrap Links -->
+      <!--Footer-->
+      <footer class="container-fluid fixed-bottom">
+         <div id="footer-details" class="row">
+            <div class="col">
+               <ul class="list-inline social-links">
+                  <li class="list-inline-items">
+                     <a href="https://www.facebook.com/" target="_blank"><i class="fab fa-facebook"></i></a>
+                  </li>
+                  <li class="list-inline-items">
+                     <a href="https://twitter.com/" target="_blank"><i class="fab fa-twitter" aria-hidden="true"></i></a>
+                  </li>
+                  <li class="list-inline-items">
+                     <a href="https://github.com/" target="_blank"><i class="fab fa-github"></i></a>
+                  </li>
+               </ul>
+            </div>
+         </div>
+      </footer>
+      <!-- Jquery/Boostrap Links -->
       <script
-          src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
-          integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
-          crossorigin="anonymous"></script>
+         src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+         integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+         crossorigin="anonymous"></script>
       <script
-          src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"
-          integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN"
-          crossorigin="anonymous"></script>
+         src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"
+         integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN"
+         crossorigin="anonymous"></script>
       <script
-          src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"
-          integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV"
-          crossorigin="anonymous"></script>
-
+         src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"
+         integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV"
+         crossorigin="anonymous"></script>
       <!-- Javascript for this page Link -->
-<script src="assets/js/animalinfo.js"></script>
-</body>
+      <script src="assets/js/animalinfo.js"></script>
+   </body>
 </html>

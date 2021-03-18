@@ -41,7 +41,7 @@ function flipCard() {
   if (lockBoard) return;
   if (this === firstCard) return;
 
-//flip.play();
+
 this.classList.add('flip');
 
   if (!hasFlippedCard) {
@@ -66,7 +66,7 @@ function disableCards() {
   firstCard.removeEventListener('click', flipCard);
   secondCard.removeEventListener('click', flipCard);
   countCounter();
-  //roar.play();
+
   resetBoard();
   localStorage.setItem = ('moves')+1;
   congrats();
