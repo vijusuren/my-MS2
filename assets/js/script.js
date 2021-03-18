@@ -10,14 +10,17 @@ var stars = document.querySelectorAll(".fa-star");
 var closeicon = document.querySelector(".close");
 var modal = document.getElementById("popup1");
 var  mymusic = document.getElementById("myaudio");
-var isplaying;
+var isplaying = false;
 var finish = new Audio("assets/sound/finish.wav");
+var getMoves = localStorage.getItem('moves')+1;
 var timeron =true;
 var time=0;
 var timer;
 var minutes;
 var seconds;
-
+function play(){
+    isplaying ? mymusic.pause() : mymusic.play();
+}
 mymusic.onplaying = function(){
   isplaying=true;
 };
