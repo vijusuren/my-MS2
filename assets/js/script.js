@@ -12,7 +12,6 @@ var modal = document.getElementById("popup1");
 var  mymusic = document.getElementById("myaudio");
 var isplaying = false;
 var finish = new Audio("assets/sound/finish.wav");
-var getMoves = localStorage.getItem('moves')+1;
 var timeron =true;
 var time=0;
 var timer;
