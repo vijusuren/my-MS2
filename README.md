@@ -229,9 +229,10 @@ cards and more animal depending on the level selected.
 
 * W3C markup validation service is used for the testing of the **HTML** of all 3 HTML pages and **no error** was found.
 
-* [Home_page](https://validator.w3.org/nu/#textarea)
-* [Animalinfo_page](https://validator.w3.org/nu/#textarea)
-* [Contact_page](https://validator.w3.org/nu/#textarea)
+* [Home_page](assets/image/homepage.PNG)
+* [Animalinfo_page](assets/image/animalinfo.PNG)
+* [Contact_page](assets/image/contact.PNG)
+
 
 [W3C CSS Validation Service](https://jigsaw.w3.org/css-validator/)
 
@@ -354,5 +355,5 @@ Thank you to the following people who helped to complete this site.
 
 - The guidance and support from mentor Mr.Adegbenga Adeye
 - The support team Code Institute.
-- The Slact community.
+- The Slack community.
 ##### back to [top](#table-of-contents)
