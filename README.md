@@ -238,7 +238,7 @@ cards and more animal depending on the level selected.
 
 * W3 CSS validation service is used for the testing of the **CSS** of the project and no error was found.
 
-* [style.css](https://jigsaw.w3.org/css-validator/validator). This file shows on error .animated_rainbow_1 liner is not a animation value
+* [style.css](assets/image/stylecss.PNG). This file shows on error .animated_rainbow_1 liner is not a animation value. Rectified that error now it shows no error occurred.
 
 [Beautifytools](https://beautifytools.com/javascript-validator.php)
 
