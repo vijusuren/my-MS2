@@ -244,7 +244,7 @@ cards and more animal depending on the level selected.
 
 * This beautifytools.com is online JavaScript code validation tool was used to test the **JavaScript** codes of all 3 js pages from the project.
 
-* [script.js](assets/image/Scriptjs.PNG) After running the script.js file through beautifytools.com, some 
+* [script.js](assets/image/scriptjs.PNG) After running the script.js file through beautifytools.com, some 
 warnings were displaying, that "let" and "const" is available in ES6 or use Mozilla extension. So I replaced 
 all let and const variables by "var" and that warnings are gone. Still, some warnings about Arrow function 
 syntax is displaying, which can be ignored.
